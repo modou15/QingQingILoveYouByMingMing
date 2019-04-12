@@ -12,11 +12,29 @@
 <script type="text/javascript" src="js/55ac9a860001a6c500000000.js"></script>
 <script type="text/javascript" src="js/55ac9ea30001ace700000000.js"></script>
 <script type="text/javascript" src="js/55c16c910001e21b00000000.js"></script>
-
+<style>
+    .play-btn-cym {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        border-radius: 4px;
+        text-align: center;
+        opacity: 0.8;
+        background: green;
+        z-index: 100;
+    }
+</style>
 </head>
 
 <body>
+        <div class="play-btn-cym">播放音乐</div>
 <div id='content'>
+    
     <ul class='content-wrap'>
         <!-- 第一副画面 -->
         <li>
@@ -86,6 +104,11 @@
     <div id="snowflake"></div>
     <!-- 小男孩 -->
     <div id="boy" class="charector"></div>
+    <script>
+        $('.play-btn-cym').on('click', function() {
+            $(this).fadeOut(500);
+        });
+    </script>
 </div>
 </body>
 </html>
