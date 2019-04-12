@@ -105,6 +105,22 @@
     <!-- 小男孩 -->
     <div id="boy" class="charector"></div>
     <script>
+        function Hmlt5Audio(url, loop) {
+            var audio = new Audio(url);
+            audio.autoplay = true;
+            audio.loop = loop || false;
+            audio.play();
+            return {
+            end: function(callback) {
+                audio.addEventListener(
+                "ended",
+                function() {
+                    callback();
+                },
+                false
+                );
+            }
+            };
         $('.play-btn-cym').on('click', function() {
             $(this).fadeOut(500);
             var audio1 = Hmlt5Audio(confi.audio.playURl);
