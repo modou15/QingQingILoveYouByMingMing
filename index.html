@@ -107,6 +107,10 @@
     <script>
         $('.play-btn-cym').on('click', function() {
             $(this).fadeOut(500);
+            var audio1 = Hmlt5Audio(confi.audio.playURl);
+            audio1.end(function() {
+            Hmlt5Audio(confi.audio.cycleURL, true);
+            });
         });
     </script>
 </div>
